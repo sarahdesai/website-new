@@ -122,11 +122,72 @@ h1 {
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
-    padding: 100px;
+    padding-top: 75px;
     color: #80971a;
 }
 
-header {
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333d05;
+    margin: 5px;
+}
+
+.main-header {
+    height: 275px;
     background-color: #c6d87f;
-    
+}
+
+.project-header {
+    height: 325px;
+    background-color: #c6d87f;
+}
+
+a {
+    text-decoration: none;
+    color: #232b03;
+    font-weight: bolder;
+}
+/* Basic Flex Setup
+------------------------------ */
+
+/* Flexbox creates sticky footer for the homepage, since the content does not fill the whole page. You could do the same for the resume page to be consistent */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1 1 auto;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+}
+
+main {
+    width: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* delete gap if you would rather use margins */
+}
+
+.item {
+    text-align: center;
+    flex: 1 1 auto;
+    max-width: 200px;
+    max-height: 150px;
+    background-color: rgb(125, 158, 91);
+    padding: 5rem;
+    /* add margin if you don't want to use gap in flex container (main) */
+    margin: 25px;
+}
+
+.item :hover {
+    background-color: #b6c775;
 }
