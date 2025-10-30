@@ -31,7 +31,7 @@ body {
 }
 
 img {
-    width: 100%;
+    border-radius: 10px;
 }
 
 /* Basic styles for the navbar */
@@ -144,11 +144,13 @@ h3 {
     color: #333d05;
     padding-left: 100px;
     padding-right: 100px;
-    margin: 50px;
+    margin: 150px 150px 0px 150px;
 }
 p {
-    padding: 50px;
+    margin-left: 225px;
+    padding: 25px;
     font-size: 1.8rem;
+    color:#80971a;
 }
 
 .main-header {
@@ -167,18 +169,31 @@ a {
     font-weight: bolder;
 }
 
-.bio {
-    margin: 150px;
+.profile {
+    text-align: left;
+    margin-left: 150px ;
 }
+.bio {
+    font-size: 2.6rem;
+}
+
+.profile-pic {
+    float: left;
+    margin-left: 150px;
+    margin-top: 150px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
 /* Basic Flex Setup
 ------------------------------ */
 
 /* Flexbox creates sticky footer for the homepage, since the content does not fill the whole page. You could do the same for the resume page to be consistent */
 
-body {
+/* body {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .content-wrapper {
     flex: 1 1 auto;
@@ -235,4 +250,99 @@ main {
 
 .item:hover {
     transform: scale(1.05);
+}
+
+.carousel {
+  width: 58vh;
+  height: auto;
+  display: flex;
+  /* gap: 4vw; */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  margin: 100px auto;
+}
+
+.slide {
+    list-style-type: none;
+  padding: 20px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+ul::scroll-button(*) {
+    border-radius: 100px;
+    border: 0;
+    padding: 10px;
+  font-size: 3.6rem;
+  line-height: 2rem;
+  background-color:#c6d87f;
+  color:#80971a ;
+  cursor: pointer;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+  opacity: 1;
+}
+
+ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+ul::scroll-button(left) {
+  content: "<";
+}
+
+ul::scroll-button(right) {
+  content: ">";
+}
+
+ul {
+  anchor-name: --my-carousel;
+}
+
+ul::scroll-button(*) {
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+ul::scroll-button(left) {
+  right: calc(anchor(left) + 10px);
+  bottom: calc(anchor(bottom) + 275px);
+}
+
+ul::scroll-button(right) {
+  left: calc(anchor(right) + 10px);
+  bottom: calc(anchor(bottom) + 275px);
+}
+
+.caption {
+    padding: 0;
+    text-align: center;
+    color: #333d05;
+}
+
+.contact {
+    display: block;
+}
+
+.contact img {
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.contact a {
+    margin: auto 25px;
+    font-size: 2.4rem;
+    vertical-align: middle;
+}
+
+
+footer {
+    padding: 25px;
 }
