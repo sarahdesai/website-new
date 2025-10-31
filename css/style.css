@@ -169,6 +169,11 @@ a {
     font-weight: bolder;
 }
 
+.colorlink {
+    color: #80971a;
+    text-decoration: underline;
+}
+
 .profile {
     text-align: left;
     margin-left: 150px ;
@@ -262,8 +267,18 @@ main {
   margin: 100px auto;
 }
 
+.carousel2 {
+  width: 28vh;
+  height: auto;
+  display: flex;
+  /* gap: 4vw; */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  margin: 100px auto;
+}
+
 .slide {
-    list-style-type: none;
+list-style-type: none;
   padding: 20px;
   flex: 0 0 100%;
   scroll-snap-align: center;
@@ -322,7 +337,7 @@ ul::scroll-button(right) {
 }
 
 .caption {
-    padding: 0;
+    margin: 0;
     text-align: center;
     color: #333d05;
 }
@@ -342,6 +357,24 @@ ul::scroll-button(right) {
     vertical-align: middle;
 }
 
+.row {
+  width: 40%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.column {
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.column img {
+  margin-top: 20px;
+  border-radius: 0px;
+}
 
 footer {
     padding: 25px;
